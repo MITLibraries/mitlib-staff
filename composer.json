@@ -23,7 +23,7 @@
     "vlucas/phpdotenv": "^2.4.0",
     "wpackagist-plugin/cf7-conditional-fields": "^1.4",
     "wpackagist-plugin/contact-form-7": "^5.0",
-    "wpackagist-plugin/pantheon-advanced-page-cache": "^0.1.4",
+    "wpackagist-plugin/pantheon-advanced-page-cache": "^0.3.0",
     "wpackagist-plugin/wp-cfm": "^1.5",
     "wpackagist-plugin/wp-mail-smtp": "^1.4",
     "wpackagist-plugin/wp-native-php-sessions": "^0.6.0",
