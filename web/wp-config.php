@@ -43,6 +43,21 @@ define( 'FORCE_SSL_ADMIN', true );
  */
 define( 'WP_POST_REVISIONS', 3 );
 
+/**
+ * Contact Form 7 configuration
+ * @link https://pantheon.io/docs/modules-plugins-known-issues/#contact-form-7
+ */
+$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+
+if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  if ( isset( $_SERVER['HTTP_USER_AGENT_HTTPS'] ) && $_SERVER['HTTP_USER_AGENT_HTTPS'] === 'ON' ) {
+    $_SERVER['SERVER_PORT'] = 443;
+  }
+  else {
+    $_SERVER['SERVER_PORT'] = 80;
+  }
+}
+
 /*
  * If NOT on Pantheon
  */
