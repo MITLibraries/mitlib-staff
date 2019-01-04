@@ -480,15 +480,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-security-audit-log",
-            "version": "3.3",
+            "version": "3.3.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-security-audit-log/",
-                "reference": "tags/3.3"
+                "reference": "tags/3.3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-security-audit-log.3.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-security-audit-log.3.3.0.1.zip",
                 "reference": null,
                 "shasum": null
             },
