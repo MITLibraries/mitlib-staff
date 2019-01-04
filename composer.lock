@@ -429,7 +429,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.1.5.zip",
-                "reference": "tags/0.1.5",
+                "reference": null,
                 "shasum": null
             },
             "require": {
