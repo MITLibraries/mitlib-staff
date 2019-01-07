@@ -43,6 +43,36 @@ define( 'FORCE_SSL_ADMIN', true );
  */
 define( 'WP_POST_REVISIONS', 3 );
 
+/**
+ * Contact Form 7 configuration
+ * @link https://pantheon.io/docs/modules-plugins-known-issues/#contact-form-7
+ */
+$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+
+if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  if ( isset( $_SERVER['HTTP_USER_AGENT_HTTPS'] ) && $_SERVER['HTTP_USER_AGENT_HTTPS'] === 'ON' ) {
+    $_SERVER['SERVER_PORT'] = 443;
+  }
+  else {
+    $_SERVER['SERVER_PORT'] = 80;
+  }
+}
+
+/**
+ * Load the outgoing mail environment from the Pantheon secrets file.
+ * Start by defining default values, then load the real ones from _get_secrets.
+ * This uses the Quicksilver Slack demonstration integration as a model.
+ *
+ * @link https://github.com/pantheon-systems/quicksilver-examples/blob/master/slack_notification/slack_notification.php
+ */
+$wpms_default = array(
+	'WPMS_ON' => false,
+	'WPMS_SMTP_PASS' => 'your_password',
+);
+$secrets = _get_secrets(array('WPMS_ON', 'WPMS_SMTP_PASS'), $wpms_default);
+define( 'WPMS_ON', $secrets['WPMS_ON'] );
+define( 'WPMS_SMTP_PASS', $secrets['WPMS_SMTP_PASS'] );
+
 /*
  * If NOT on Pantheon
  */
@@ -175,6 +205,33 @@ endif;
 */
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/wp-content' );
 define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
+
+
+/**
+ * Get secrets from secrets file.
+ *
+ * @param array $requiredKeys  List of keys in secrets file that must exist.
+ * @link https://github.com/pantheon-systems/quicksilver-examples/blob/master/slack_notification/slack_notification.php
+ */
+function _get_secrets($requiredKeys, $defaults)
+{
+  $secretsFile = $_SERVER['HOME'] . '/files/private/secrets.json';
+  if (!file_exists($secretsFile)) {
+    die('No secrets file found. Aborting!');
+  }
+  $secretsContents = file_get_contents($secretsFile);
+  $secrets = json_decode($secretsContents, 1);
+  if ($secrets == FALSE) {
+    die('Could not parse json in secrets file. Aborting!');
+  }
+  $secrets = array_merge($defaults, $secrets);
+  $missing = array_diff($requiredKeys, array_keys($secrets));
+  if (!empty($missing)) {
+    die('Missing required keys in json secrets file: ' . implode(',', $missing) . '. Aborting!');
+  }
+  return $secrets;
+}
+
 
 /**
  * WordPress Database Table prefix.

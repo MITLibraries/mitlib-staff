@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ced2e3cab898a883f807962b0e4e051",
+    "content-hash": "7f094ed93feafb132e56008dfa0b7cac",
     "packages": [
         {
             "name": "composer/installers",
@@ -201,16 +201,16 @@
         },
         {
             "name": "pantheon-systems/wordpress-composer",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/wordpress-composer.git",
-                "reference": "95ed1aece8ca8fca671463b02b4a66bb001f46a5"
+                "reference": "6d020b8d72b927e9ae78a7f1b44e390ce3d69906"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/wordpress-composer/zipball/95ed1aece8ca8fca671463b02b4a66bb001f46a5",
-                "reference": "95ed1aece8ca8fca671463b02b4a66bb001f46a5",
+                "url": "https://api.github.com/repos/pantheon-systems/wordpress-composer/zipball/6d020b8d72b927e9ae78a7f1b44e390ce3d69906",
+                "reference": "6d020b8d72b927e9ae78a7f1b44e390ce3d69906",
                 "shasum": ""
             },
             "require": {
@@ -228,10 +228,10 @@
             ],
             "description": "WordPress for Pantheon with a composer.json file.",
             "support": {
-                "source": "https://github.com/pantheon-systems/wordpress-composer/tree/5.0.1",
+                "source": "https://github.com/pantheon-systems/wordpress-composer/tree/5.0.2",
                 "issues": "https://github.com/pantheon-systems/wordpress-composer/issues"
             },
-            "time": "2018-12-13T05:07:29+00:00"
+            "time": "2018-12-20T22:52:04+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
@@ -420,16 +420,16 @@
         },
         {
             "name": "wpackagist-plugin/pantheon-advanced-page-cache",
-            "version": "0.1.5",
+            "version": "0.3.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/pantheon-advanced-page-cache/",
-                "reference": "tags/0.1.5"
+                "reference": "tags/0.3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.1.5.zip",
-                "reference": "tags/0.1.5",
+                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.0.3.0.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -459,6 +459,26 @@
             "homepage": "https://wordpress.org/plugins/wp-cfm/"
         },
         {
+            "name": "wpackagist-plugin/wp-mail-smtp",
+            "version": "1.4.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-mail-smtp/",
+                "reference": "tags/1.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-mail-smtp.1.4.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-mail-smtp/"
+        },
+        {
             "name": "wpackagist-plugin/wp-native-php-sessions",
             "version": "0.6.9",
             "source": {
@@ -480,15 +500,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-security-audit-log",
-            "version": "3.3",
+            "version": "3.3.0.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-security-audit-log/",
-                "reference": "tags/3.3"
+                "reference": "tags/3.3.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-security-audit-log.3.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-security-audit-log.3.3.0.1.zip",
                 "reference": null,
                 "shasum": null
             },
