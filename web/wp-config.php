@@ -66,12 +66,25 @@ if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
  * @link https://github.com/pantheon-systems/quicksilver-examples/blob/master/slack_notification/slack_notification.php
  */
 $wpms_default = array(
-	'WPMS_ON' => false,
 	'WPMS_SMTP_PASS' => 'your_password',
 );
-$secrets = _get_secrets(array('WPMS_ON', 'WPMS_SMTP_PASS'), $wpms_default);
-define( 'WPMS_ON', $secrets['WPMS_ON'] );
+$secrets = _get_secrets(array('WPMS_SMTP_PASS'), $wpms_default);
+
+/**
+ * Configure wp-mail-smtp plugin
+ */
+define( 'WPMS_ON', true );
 define( 'WPMS_SMTP_PASS', $secrets['WPMS_SMTP_PASS'] );
+
+/**
+ * Configure the Sentry integration.
+ */
+define( 'WP_SENTRY_DSN', $secrets['SENTRY_DSN'] );
+define( 'WP_SENTRY_PUBLIC_DSN', $secrets['SENTRY_PUBLIC_DSN'] );
+define( 'WP_SENTRY_ERROR_TYPES', E_ALL & ~E_DEPRECATED & ~E_NOTICE & ~E_USER_DEPRECATED );
+define( 'WP_SENTRY_VERSION', $secrets['SENTRY_VERSION'] );
+define( 'WP_SENTRY_ENV', $secrets['SENTRY_ENV'] );
+
 
 /*
  * If NOT on Pantheon

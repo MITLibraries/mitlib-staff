@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f094ed93feafb132e56008dfa0b7cac",
+    "content-hash": "0a4dbdf7e6f69cb07a681c344a9db4fb",
     "packages": [
         {
             "name": "composer/installers",
@@ -173,6 +173,37 @@
                 "wordpress"
             ],
             "time": "2015-06-11T15:15:30+00:00"
+        },
+        {
+            "name": "matt-bernhardt/mitlib-secrets-widget",
+            "version": "0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matt-bernhardt/mitlib-secrets-widget.git",
+                "reference": "29bfe374db415b39fa720b9cb7eeca2d38449e6f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matt-bernhardt/mitlib-secrets-widget/zipball/29bfe374db415b39fa720b9cb7eeca2d38449e6f",
+                "reference": "29bfe374db415b39fa720b9cb7eeca2d38449e6f",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Matt Bernhardt",
+                    "email": "mjbernha@mit.edu"
+                }
+            ],
+            "description": "A WordPress plugin that provides an administrative widget to list available secrets",
+            "support": {
+                "source": "https://github.com/matt-bernhardt/mitlib-secrets-widget/tree/0.1.2",
+                "issues": "https://github.com/matt-bernhardt/mitlib-secrets-widget/issues"
+            },
+            "time": "2019-01-11T18:25:28+00:00"
         },
         {
             "name": "pantheon-systems/quicksilver-pushback",
@@ -517,6 +548,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-security-audit-log/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-sentry-integration",
+            "version": "2.7.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-sentry-integration/",
+                "reference": "tags/2.7.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-sentry-integration.2.7.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-sentry-integration/"
         },
         {
             "name": "wpackagist-theme/twentyseventeen",
