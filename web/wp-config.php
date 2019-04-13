@@ -70,8 +70,8 @@ $wpms_default = array(
 	'WPMS_SMTP_PASS' => 'your_password',
 );
 $secrets = _get_secrets(array('WPMS_ON', 'WPMS_SMTP_PASS'), $wpms_default);
-define( 'WPMS_ON', $secrets['WPMS_ON'] );
-define( 'WPMS_SMTP_PASS', $secrets['WPMS_SMTP_PASS'] );
+define( 'WPMS_ON', true );
+define( 'WPMS_SMTP_PASS', '%5*2UbsV$MFiWfK' );
 
 /*
  * If NOT on Pantheon
