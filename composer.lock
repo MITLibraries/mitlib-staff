@@ -201,16 +201,16 @@
         },
         {
             "name": "pantheon-systems/wordpress-composer",
-            "version": "5.0.2",
+            "version": "5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/wordpress-composer.git",
-                "reference": "6d020b8d72b927e9ae78a7f1b44e390ce3d69906"
+                "reference": "2a41a60bb25a4879c1b94c4c3c5b244e9135dbca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/wordpress-composer/zipball/6d020b8d72b927e9ae78a7f1b44e390ce3d69906",
-                "reference": "6d020b8d72b927e9ae78a7f1b44e390ce3d69906",
+                "url": "https://api.github.com/repos/pantheon-systems/wordpress-composer/zipball/2a41a60bb25a4879c1b94c4c3c5b244e9135dbca",
+                "reference": "2a41a60bb25a4879c1b94c4c3c5b244e9135dbca",
                 "shasum": ""
             },
             "require": {
@@ -228,10 +228,10 @@
             ],
             "description": "WordPress for Pantheon with a composer.json file.",
             "support": {
-                "source": "https://github.com/pantheon-systems/wordpress-composer/tree/5.0.2",
+                "source": "https://github.com/pantheon-systems/wordpress-composer/tree/5.2.2",
                 "issues": "https://github.com/pantheon-systems/wordpress-composer/issues"
             },
-            "time": "2018-12-20T22:52:04+00:00"
+            "time": "2019-06-18T19:34:32+00:00"
         },
         {
             "name": "roots/wp-password-bcrypt",
